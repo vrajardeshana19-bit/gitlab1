@@ -4,3 +4,4 @@ def calculate_discount(total, coupon):
     elif coupon == "SAVE20":
         return round(total * 0.80, 2)
     return total
+    
