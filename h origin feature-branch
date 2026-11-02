@@ -1,0 +1,44 @@
+[1mdiff --git a/app.py b/app.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..546a7f4[m
+[1m--- /dev/null[m
+[1m+++ b/app.py[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32mfrom flask import Flask[m
+[32m+[m
+[32m+[m[32mapp = Flask(__name__)[m
+[32m+[m[32mSHIPPING_ANNOUNCEMENT = "Free shipping on orders above ₹1999!"[m
+[32m+[m
+[32m+[m[32mPRODUCTS = [[m
+[32m+[m[32m    {"id": 1, "name": "Wireless Mouse", "price": 799},[m
+[32m+[m[32m    {"id": 2, "name": "Mechanical Keyboard", "price": 2499},[m
+[32m+[m[32m    {"id": 3, "name": "USB-C Hub", "price": 1299},[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32m@app.route("/")[m
+[32m+[m[32mdef home():[m
+[32m+[m[32m    return "Home"[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    app.run(debug=True)[m
+[1mdiff --git a/coupan.py b/coupan.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..63a59c1[m
+[1m--- /dev/null[m
+[1m+++ b/coupan.py[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32mdef calculate_discount(total, coupon):[m
+[32m+[m[32m    if coupon == "SAVE10":[m
+[32m+[m[32m        return round(total * 0.90, 2)[m
+[32m+[m[32m    elif coupon == "SAVE20":[m
+[32m+[m[32m        return round(total * 0.80, 2)[m
+[32m+[m[32m    return total[m
+\ No newline at end of file[m
+[1mdiff --git a/requirements.txt b/requirements.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8ab6294[m
+[1m--- /dev/null[m
+[1m+++ b/requirements.txt[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mflask[m
+\ No newline at end of file[m
